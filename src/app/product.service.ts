@@ -8,7 +8,6 @@ export class ProductService {
 
   getAlbum(id : number)
   {
-    return this._htpp.get(_albumUrl)
-      .response.json();
+    return this._htpp.get(this._albumUrl).map((response)=>response.json);
   }
 }
