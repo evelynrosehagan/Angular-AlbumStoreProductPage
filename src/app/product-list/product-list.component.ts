@@ -12,6 +12,7 @@ export class ProductListComponent implements OnInit {
   constructor(private _productSerice : ProductService) { }
 
   ngOnInit() {
+    this._productSerice.getProducts().subscribe(response => this.products = response);
   }
 
 }
